@@ -1,0 +1,7 @@
+node_modules/
+.env
+*.log
+__pycache__/
+database.db
+source_a.json
+source_b.csv
