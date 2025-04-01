@@ -94,20 +94,41 @@ npm start
 
 4. Open your browser and navigate to `http://localhost:3000`
 
-## Usage
+The task processing workflow operates as follows:
+User creates a task with filtering parameters
+System queues the task for processing
+Backend processes data sources asynchronously
+Results are stored in the database and made available via API
 
-1. Create a new data sourcing task
-2. Specify filters like date range and car brands
-3. Submit the task and wait for processing
-4. View the results with interactive charts
-5. Apply additional filters to analyze the data
+API Endpoints Design
+The API follows RESTful principles with these key endpoints:
+GET /api/tasks: List all tasks with status information
+POST /api/tasks: Create new data processing tasks
+GET /api/tasks/{id}: Retrieve specific task details
+GET /api/tasks/{id}/data: Retrieve processed data for visualization
 
-## Evaluation Criteria
+Data Visualization
+The application provides three main visualization types:
+1. Monthly Sales Trend
+Line chart showing total sales over time
+Interactive tooltips with exact values
+Time-based filtering capabilities
 
-- **Architecture and Design**: The application follows a clean separation of concerns with proper MVC architecture.
-- **Frontend and Visualization**: Interactive D3.js visualizations with dynamic filtering.
-- **Code Quality & Documentation**: Code is modular, well-documented, and follows best practices.
+2. Product Category Analysis
+Bar chart displaying sales by product category
+Color-coded category representation
+Sortable by total sales value
 
-## License
+3. Platform Comparison
+Multi-metric comparison between online and physical store sales
+Normalized percentage view for fair comparison
+Key metrics: Total Sales, Average Order Value, Items Sold, and Order Count
 
-This project is open source and available under the [MIT License](LICENSE). 
+
+The application includes several performance optimizations:
+Task data polling with proper cleanup
+React component memoization
+D3 chart rendering with element cleanup
+Conditional state updates to prevent rendering loops
+
+Overall The application is designed to be reliable, scalable, modular, and easy to understand.
