@@ -102,10 +102,10 @@ Results are stored in the database and made available via API
 
 API Endpoints Design
 The API follows RESTful principles with these key endpoints:
-GET /api/tasks: List all tasks with status information
-POST /api/tasks: Create new data processing tasks
-GET /api/tasks/{id}: Retrieve specific task details
-GET /api/tasks/{id}/data: Retrieve processed data for visualization
+1. GET /api/tasks: List all tasks with status information
+2. POST /api/tasks: Create new data processing tasks
+3. GET /api/tasks/{id}: Retrieve specific task details
+4. GET /api/tasks/{id}/data: Retrieve processed data for visualization
 
 Data Visualization
 The application provides three main visualization types:
